@@ -1,0 +1,160 @@
+<!-- Start of Math Test -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Math Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            width: 50%;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .options {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .option-label {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin: 5px 0;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        input, textarea {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+    </style>
+    <script>
+        let currentPage = 0;
+        let score = 0;
+        let userAnswers = {};
+        let correctAnswers = { q1: "15", q2: "8", q3: "3", q4: "5", q5: "6" };
+        let nickname = "";
+
+        function nextPage() {
+            document.getElementById(`page${currentPage}`).style.display = "none";
+            currentPage++;
+            document.getElementById(`page${currentPage}`).style.display = "block";
+        }
+
+        function previousPage() {
+            document.getElementById(`page${currentPage}`).style.display = "none";
+            currentPage--;
+            document.getElementById(`page${currentPage}`).style.display = "block";
+        }
+
+        function storeAnswer(question, answer) {
+            userAnswers[question] = answer;
+        }
+
+        function submitTest() {
+            score = 0;
+            let resultHtml = "<h2>Results</h2><p>Nickname: " + nickname + "</p><ul>";
+            
+            for (let key in correctAnswers) {
+                let userAnswer = userAnswers[key] || "No Answer";
+                let correct = correctAnswers[key];
+                
+                if (userAnswer == correct) {
+                    score++;
+                    resultHtml += `<li>${key}: Correct ✅</li>`;
+                } else {
+                    resultHtml += `<li>${key}: Incorrect ❌ (Correct Answer: ${correct})</li>`;
+                }
+            }
+            
+            resultHtml += `</ul><h3>Final Score: ${score} / 5</h3>`;
+            document.getElementById("results").innerHTML = resultHtml;
+            nextPage();
+        }
+    </script>
+</head>
+<body>
+    <div class="container" id="page0">
+        <h2>Welcome to the Math Test</h2>
+        <label for="name">Enter your nickname:</label>
+        <input type="text" id="name" required>
+        <button onclick="nickname = document.getElementById('name').value; nextPage();">Start</button>
+    </div>
+
+    <div class="container" id="page1" style="display: none;">
+        <h3>Question 1</h3>
+        <p>What is 5 &times; 3?</p>
+        <div class="options">
+            <label class="option-label"><input type="radio" name="q1" value="10" onclick="storeAnswer('q1', '10')"> 10</label>
+            <label class="option-label"><input type="radio" name="q1" value="15" onclick="storeAnswer('q1', '15')"> 15</label>
+            <label class="option-label"><input type="radio" name="q1" value="20" onclick="storeAnswer('q1', '20')"> 20</label>
+        </div>
+        <button onclick="nextPage()">Next</button>
+    </div>
+
+    <div class="container" id="page2" style="display: none;">
+        <h3>Question 2</h3>
+        <p>What is the square root of 64?</p>
+        <div class="options">
+            <label class="option-label"><input type="radio" name="q2" value="6" onclick="storeAnswer('q2', '6')"> 6</label>
+            <label class="option-label"><input type="radio" name="q2" value="8" onclick="storeAnswer('q2', '8')"> 8</label>
+            <label class="option-label"><input type="radio" name="q2" value="10" onclick="storeAnswer('q2', '10')"> 10</label>
+        </div>
+        <button onclick="previousPage()">Back</button>
+        <button onclick="nextPage()">Next</button>
+    </div>
+
+    <div class="container" id="page3" style="display: none;">
+        <h3>Question 3</h3>
+        <p>Solve: 12 &divide; 4</p>
+        <div class="options">
+            <label class="option-label"><input type="radio" name="q3" value="2" onclick="storeAnswer('q3', '2')"> 2</label>
+            <label class="option-label"><input type="radio" name="q3" value="3" onclick="storeAnswer('q3', '3')"> 3</label>
+            <label class="option-label"><input type="radio" name="q3" value="4" onclick="storeAnswer('q3', '4')"> 4</label>
+        </div>
+        <button onclick="previousPage()">Back</button>
+        <button onclick="nextPage()">Next</button>
+    </div>
+
+    <div class="container" id="page4" style="display: none;">
+        <h3>Question 4</h3>
+        <p>Which number is &le; 6?</p>
+        <div class="options">
+            <label class="option-label"><input type="radio" name="q4" value="7" onclick="storeAnswer('q4', '7')"> 7</label>
+            <label class="option-label"><input type="radio" name="q4" value="6" onclick="storeAnswer('q4', '6')"> 6</label>
+            <label class="option-label"><input type="radio" name="q4" value="8" onclick="storeAnswer('q4', '8')"> 8</label>
+        </div>
+        <button onclick="previousPage()">Back</button>
+        <button onclick="submitTest()">Submit Test</button>
+    </div>
+</body>
+</html>
+<!-- End of Math Test -->
