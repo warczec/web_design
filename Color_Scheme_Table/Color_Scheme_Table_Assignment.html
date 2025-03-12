@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Scheme Table</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            margin: 20px;
+        }
+        table {
+            width: 70%;
+            border-collapse: collapse;
+            margin: 20px auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 15px;
+            text-align: center;
+        }
+        th {
+            font-size: 1.6em;
+            font-weight: bold;
+            background-color: #333;
+            color: white;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        .color-name {
+            font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+        .color1 { background-color: #FF5733; color: white; }
+        .color2 { background-color: #33A1FF; color: white; }
+        .color3 { background-color: #28A745; color: white; }
+        .color4 { background-color: #FFD700; color: black; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1 style="font-size: 2.5em; font-style: italic; font-weight: bold; color: #333; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); text-decoration: underline;">Vibrant Harmony Color Scheme</h1>
+    <table>
+        <tr>
+            <th>Color Name</th>
+            <th>Hex Value</th>
+            <th>RGB Value</th>
+            <th>HSL Value</th>
+        </tr>
+        <tr class="color1">
+            <td class="color-name">Fiery Orange</td>
+            <td>#FF5733</td>
+            <td>rgb(255, 87, 51)</td>
+            <td>hsl(11, 100%, 60%)</td>
+        </tr>
+        <tr class="color2">
+            <td class="color-name">Sky Blue</td>
+            <td>#33A1FF</td>
+            <td>rgb(51, 161, 255)</td>
+            <td>hsl(205, 100%, 60%)</td>
+        </tr>
+        <tr class="color3">
+            <td class="color-name">Lush Green</td>
+            <td>#28A745</td>
+            <td>rgb(40, 167, 69)</td>
+            <td>hsl(134, 61%, 41%)</td>
+        </tr>
+        <tr class="color4">
+            <td class="color-name">Golden Sun</td>
+            <td>#FFD700</td>
+            <td>rgb(255, 215, 0)</td>
+            <td>hsl(51, 100%, 50%)</td>
+        </tr> 
+    </table>
+</body>
+</html>
