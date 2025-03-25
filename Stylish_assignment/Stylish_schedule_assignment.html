@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recently Busiest Daily Schedule</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        table {
+            width: 60%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background-color: #ffffff;
+            box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+        }
+        th, td {
+            border: 1px solid #dddddd;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .highlight-row {
+            background-color: #ffeb3b;
+        }
+        .important-column {
+            font-weight: bold;
+            color: #e91e63;
+        }
+    </style>
+</head>
+<body>
+    <h1>My Recently Busiest Day Schedule</h1>
+    <table>
+        <tr>
+            <th>Time</th>
+            <th>Event</th>
+        </tr>
+        <tr class="highlight-row">
+            <td class="important-column">10 AM</td>
+            <td>Wake up and get ready</td>
+        </tr>
+        <tr>
+            <td>10:10-10:30 AM</td>
+            <td>Eat breakfast</td>
+        </tr>
+        <tr>
+            <td class="important-column">11-12 AM</td>
+            <td>Hit the gym</td>
+        </tr>
+        <tr class="highlight-row">
+            <td class="important-column">1:00-3:00 PM</td>
+            <td>Styduing</td>
+        </tr>
+        <tr>
+            <td>3:15-5:10 PM</td>
+            <td>Go for a walk</td>
+        </tr>
+        <tr>
+            <td>6:00-8:00 PM</td>
+            <td>Doing home stuff</td>
+        </tr>
+        <tr>
+            <td>9:00 PM</td>
+            <td>Dinner time</td>
+        </tr>
+        <tr class="highlight-row">
+            <td class="important-column">9:00PM-0:00AM </td>
+            <td>Finishing some stuff, playing, free time</td>
+        </tr>
+        <tr>
+            <td>00:30-01:00 AM</td>
+            <td>Getting ready for sleep</td>
+        </tr>
+    </table>
+</body>
+</html>
