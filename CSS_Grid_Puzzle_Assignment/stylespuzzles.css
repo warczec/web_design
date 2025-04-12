@@ -1,0 +1,55 @@
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right, #f9fafb, #e2e8f0);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Header name and date */
+.header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.header h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #2d3748;
+}
+
+.header p {
+  margin: 4px;
+  font-size: 16px;
+  color: #4a5568;
+}
+
+/* Grid container for puzzle */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: repeat(4, 100px);
+  gap: 10px;
+  padding: 10px;
+  background-color: white;
+  border: 4px solid #4a5568;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+/* Puzzle pieces */
+.grid-item {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* faulty piece */
+.hidden {
+  display: none;
+}
