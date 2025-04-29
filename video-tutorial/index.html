@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>video-tutorial-assignment</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>How to Embed a YouTube Video into Your Website</h1>
+      <p>Follow this guide and you will be able to embedvideo from youtube on your own website.</p>
+    </header>
+
+    <section class="step">
+      <h2>Step 1: Find the Video You Want</h2>
+      <p>Start by heading over to <a href="https://youtube.com" target="_blank">YouTube</a> and find a video you'd like to add to your site. Make sure it's appropriate and embeddable (some videos have restrictions).</p>
+      <img src="screenshots/step1.png" alt="YouTube video page showing a selected video">
+    </section>
+
+    <section class="step">
+      <h2>Step 2: Click the "Share" Button</h2>
+      <p>Just below the video player, you'll see a <strong>Share</strong> button. Click it to open up sharing options.</p>
+      <img src="screenshots/step2.png" alt="Clicking the Share button under a YouTube video">
+    </section>
+
+    <section class="step">
+      <h2>Step 3: Select "Embed"</h2>
+      <p>From the popup, click the <strong>Embed</strong> option. This will show you the code you'll need.</p>
+      <img src="screenshots/step3.png" alt="Choosing the Embed option from sharing menu">
+    </section>
+
+    <section class="step">
+      <h2>Step 4: Copy the Code</h2>
+      <p>You’ll now see an iframe code. Just click <strong>Copy</strong> to grab it to your clipboard. Make sure there's no restrictions on video you want to use (mine have that) search for videos that will allowed you to use embedding</p>
+      <img src="screenshots/step4.png" alt="Copying the iframe embed code">
+    </section>
+
+    <section class="step">
+      <h2>Step 5: Paste It into Your HTML</h2>
+      <p>Open your website’s HTML file and paste the code wherever you want the video to appear. Here’s an example:</p>
+      <pre><code>&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/OLAnL1IocEo" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</code></pre>
+    </section>
+
+    <section class="video">
+      <h2>🎥 Here's the Embedded Video Example</h2>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/pKd0Rpw7O48" frameborder="0" allowfullscreen></iframe>
+    </section>
+
+    <footer>
+      <p>Done! You've just learned how to embed a YouTube video. Screenshots were cropped to keep things clear and focused. ✨</p>
+    </footer>
+  </div>
+</body>
+</html>
