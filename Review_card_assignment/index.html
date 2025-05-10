@@ -3,47 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Study Flashcards</title>
+    <title>Review Cards Assignment</title>
     <link rel="stylesheet" href="styles.css">
+    <script>
+        window.onload = function() {
+            const dateElement = document.getElementById('date');
+            const today = new Date();
+            const formattedDate = today.toLocaleDateString();
+            dateElement.textContent = formattedDate;
+        }
+    </script>
 </head>
 <body>
-    <h1 class="page-title">Study Flashcards</h1>
-
+    <h1>Review Cards Assignment</h1>
+    <div id="date"></div>
+    <a href="https://github.com/warczec/web_design" class="github-link" target="_blank">Visit My GitHub Repository</a>
     <div class="card-container">
         <div class="card">
-            <div class="card-front">What is HTML Syntax?</div>
-            <div class="card-back">HTML Syntax refers to the rules and structure used to write HTML code.</div>
+            <div class="inner-card">
+                <div class="front">HTML</div>
+                <div class="back">The standard markup language for creating Web pages.</div>
+            </div>
         </div>
         <div class="card">
-            <div class="card-front">What is Document Structure?</div>
-            <div class="card-back">Document Structure refers to the way HTML elements are organized in a webpage (using <html>, <head>, <body>, etc.).</div>
+            <div class="inner-card">
+                <div class="front">CSS</div>
+                <div class="back">CSS describes how HTML elements are to be displayed on screen.</div>
+            </div>
         </div>
         <div class="card">
-            <div class="card-front">What are Links in HTML?</div>
-            <div class="card-back">Links in HTML are created using the <a> tag and are used to navigate between pages or to external resources.</div>
+            <div class="inner-card">
+                <div class="front">CSS3</div>
+                <div class="back">The latest version of CSS with new features like transitions and animations.</div>
+            </div>
         </div>
         <div class="card">
-            <div class="card-front">What is Inline Styling?</div>
-            <div class="card-back">Inline Styling is CSS that is applied directly within an HTML element using the "style" attribute.</div>
+            <div class="inner-card">
+                <div class="front">Tables</div>
+                <div class="back">Used for displaying data in tabular format using rows and columns.</div>
+            </div>
         </div>
         <div class="card">
-            <div class="card-front">What is the Box Model?</div>
-            <div class="card-back">The Box Model is a concept in CSS that defines the space around an element, including margins, borders, padding, and content.</div>
+            <div class="inner-card">
+                <div class="front">Internal CSS</div>
+                <div class="back">A way to style a single HTML page using a &lt;style&gt; tag within the head.</div>
+            </div>
         </div>
         <div class="card">
-            <div class="card-front">What are Transitions and Animations in CSS?</div>
-            <div class="card-back">Transitions and Animations allow elements to change styles over time, creating dynamic effects when interacting with the page.</div>
+            <div class="inner-card">
+                <div class="front">The Flexible Layout</div>
+                <div class="back">CSS Flexbox and Grid allow dynamic layouts that adjust to screen size.</div>
+            </div>
         </div>
         <div class="card">
-            <div class="card-front">What is the Role of Forms in HTML?</div>
-            <div class="card-back">Forms in HTML are used to collect user input and send it to a server for processing, typically using the <form> element.</div>
+            <div class="inner-card">
+                <div class="front">Pseudo-classes & Elements</div>
+                <div class="back">Special keywords to style elements based on their state or position.</div>
+            </div>
         </div>
         <div class="card">
-            <div class="card-front">What is CSS3 Styling?</div>
-            <div class="card-back">CSS3 is the latest version of CSS that introduces new features like border-radius, shadows, animations, and transitions.</div>
+            <div class="inner-card">
+                <div class="front">Transitions & Animations</div>
+                <div class="back">Used to animate changes in CSS properties smoothly.</div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="inner-card">
+                <div class="front">CSS Grid Layout</div>
+                <div class="back">A CSS layout system for creating complex and responsive grid-based designs easily.</div>
+            </div>
         </div>
     </div>
-
-    <script src="script.js"></script>
 </body>
 </html>
